@@ -38,8 +38,3 @@ properties:
     type: array
     items:
       $ref: ./License.yaml
-required:
-  - id
-  - name
-  - description
-  - licenses
