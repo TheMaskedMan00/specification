@@ -94,22 +94,4 @@ jobs:
 
   # https://blog.marcnuri.com/triggering-github-actions-across-different-repositories
   # Make sure this is same as in sdk_generate.yaml
-  sdk_generate:
-    runs-on: ubuntu-latest
-    needs: version_check
-    name: Trigger Remote SDK builds
-    strategy:
-      matrix:
-        project:
-          - javascript
-          - csharp
-          - python
-          - java
-          - rust
-    steps:
-      - name: Triggering build SDK - ${{ matrix.node }}
-        run: |
-          curl -X POST https://api.github.com/repos/vrchatapi/vrchatapi-${{ matrix.project }}/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{ secrets.ACCESS_TOKEN }} \
-          --data '{"event_type": "spec_release"}'
+
