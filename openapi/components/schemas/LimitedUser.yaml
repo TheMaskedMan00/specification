@@ -42,14 +42,5 @@ properties:
     type: string
   friendKey:
     type: string
-required:
-  - id
-  - displayName
-  - statusDescription
-  - developerType
-  - last_platform
-  - status
-  - isFriend
-  - tags
 title: LimitedUser
 type: object
