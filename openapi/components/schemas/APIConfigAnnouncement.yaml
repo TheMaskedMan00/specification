@@ -11,6 +11,3 @@ properties:
     description: Announcement text
     minLength: 1
     type: string
-required:
-  - name
-  - text
