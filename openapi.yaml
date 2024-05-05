@@ -3535,8 +3535,6 @@ components:
           default: false
           description: Status if a user exist with that username or userId.
           type: boolean
-      required:
-        - userExists
       title: UserExists
       type: object
     Response:
@@ -3547,8 +3545,6 @@ components:
         status_code:
           minimum: 100
           type: integer
-      required:
-        - status_code
       title: Response
       type: object
     Error:
@@ -3613,12 +3609,6 @@ components:
           format: date-time
           description: only present in CurrentUser badges
           nullable: true
-      required:
-        - badgeDescription
-        - badgeId
-        - badgeImageUrl
-        - badgeName
-        - showcased
     AvatarID:
       example: avtr_912d66a4-4714-43b8-8407-7de2cafbf55b
       title: AvatarID
@@ -3675,9 +3665,6 @@ components:
         updated_at:
           format: date-time
           type: string
-      required:
-        - displayName
-        - updated_at
       title: PastDisplayName
       type: object
     GroupID:
@@ -3934,51 +3921,6 @@ components:
           type: string
           deprecated: true
           description: '-| **DEPRECATED:** VRChat API no longer return usernames of other users. [See issue by Tupper for more information](https://github.com/pypy-vrc/VRCX/issues/429).'
-      required:
-        - id
-        - displayName
-        - userIcon
-        - badges
-        - bio
-        - bioLinks
-        - profilePicOverride
-        - pronouns
-        - statusDescription
-        - pastDisplayNames
-        - hasEmail
-        - hasPendingEmail
-        - obfuscatedEmail
-        - obfuscatedPendingEmail
-        - emailVerified
-        - hasBirthday
-        - unsubscribe
-        - statusHistory
-        - statusFirstTime
-        - friends
-        - friendGroupNames
-        - currentAvatarImageUrl
-        - currentAvatarThumbnailImageUrl
-        - currentAvatarTags
-        - currentAvatar
-        - currentAvatarAssetUrl
-        - acceptedTOSVersion
-        - steamId
-        - steamDetails
-        - oculusId
-        - hasLoggedInFromClient
-        - homeLocation
-        - twoFactorAuthEnabled
-        - state
-        - tags
-        - developerType
-        - last_login
-        - last_mobile
-        - last_platform
-        - allowAvatarCopying
-        - status
-        - date_joined
-        - isFriend
-        - friendKey
       title: CurrentUser
       type: object
     TwoFactorAuthCode:
@@ -3995,8 +3937,6 @@ components:
       properties:
         verified:
           type: boolean
-      required:
-        - verified
     TwoFactorEmailCode:
       title: TwoFactorEmailCode
       type: object
@@ -4011,8 +3951,6 @@ components:
       properties:
         verified:
           type: boolean
-      required:
-        - verified
     VerifyAuthTokenResult:
       title: VerifyAuthTokenResult
       type: object
@@ -4022,9 +3960,6 @@ components:
         token:
           type: string
           minLength: 1
-      required:
-        - ok
-        - token
     Success:
       properties:
         success:
@@ -4095,11 +4030,6 @@ components:
           type: string
         variant:
           type: string
-      required:
-        - id
-        - unityVersion
-        - assetVersion
-        - platform
       title: UnityPackage
       type: object
     Avatar:
@@ -4169,23 +4099,6 @@ components:
           example: 68
           minimum: 0
           type: integer
-      required:
-        - authorId
-        - authorName
-        - created_at
-        - description
-        - featured
-        - id
-        - imageUrl
-        - name
-        - releaseStatus
-        - tags
-        - thumbnailImageUrl
-        - unityPackages
-        - unityPackageUrl
-        - unityPackageUrlObject
-        - updated_at
-        - version
       title: Avatar
       type: object
     SortOption:
@@ -4353,13 +4266,6 @@ components:
           $ref: '#/components/schemas/SubscriptionPeriod'
         tier:
           type: number
-      required:
-        - id
-        - steamItemId
-        - amount
-        - description
-        - period
-        - tier
     TransactionSteamWalletInfo:
       description: ''
       type: object
@@ -4386,11 +4292,6 @@ components:
           type: string
           example: Trusted
           minLength: 1
-      required:
-        - state
-        - country
-        - currency
-        - status
     TransactionSteamInfo:
       description: ''
       type: object
@@ -4412,12 +4313,6 @@ components:
           type: string
           minLength: 1
           description: Steam Transaction ID, NOT the same as VRChat TransactionID
-      required:
-        - walletInfo
-        - steamId
-        - orderId
-        - steamUrl
-        - transId
       title: TransactionSteamInfo
     TransactionAgreement:
       description: ''
@@ -4486,24 +4381,6 @@ components:
           type: number
         failedAttempts:
           type: number
-      required:
-        - agreementId
-        - itemId
-        - status
-        - period
-        - frequency
-        - billingType
-        - startDate
-        - endDate
-        - recurringAmt
-        - currency
-        - timeCreated
-        - nextPayment
-        - lastPayment
-        - lastAmount
-        - lastAmountVat
-        - outstanding
-        - failedAttempts
       title: TransactionAgreement
     Transaction:
       description: ''
@@ -4541,14 +4418,6 @@ components:
         isTokens:
           type: boolean
           default: false
-      required:
-        - id
-        - status
-        - subscription
-        - sandbox
-        - created_at
-        - updated_at
-        - error
     LicenseGroupID:
       example: lgrp_608513da-b213-4e15-80af-bd88c27f0979
       title: LicenseGroupID
@@ -4615,21 +4484,6 @@ components:
         isGift:
           type: boolean
           default: false
-      required:
-        - id
-        - transactionId
-        - store
-        - amount
-        - description
-        - period
-        - tier
-        - active
-        - status
-        - expires
-        - created_at
-        - updated_at
-        - licenseGroups
-        - isGift
       title: UserSubscription
     LicenseType:
       type: string
@@ -4664,11 +4518,6 @@ components:
           minLength: 1
         forAction:
           $ref: '#/components/schemas/LicenseAction'
-      required:
-        - forId
-        - forType
-        - forName
-        - forAction
     LicenseGroup:
       description: ''
       type: object
@@ -4710,11 +4559,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/License'
-      required:
-        - id
-        - name
-        - description
-        - licenses
     FavoriteID:
       example: fvrt_9568d189-8776-44a5-a8c8-defc981e44de
       title: FavoriteID
@@ -4742,11 +4586,6 @@ components:
           type: array
         type:
           $ref: '#/components/schemas/FavoriteType'
-      required:
-        - id
-        - type
-        - favoriteId
-        - tags
       title: Favorite
       type: object
     AddFavoriteRequest:
@@ -4805,15 +4644,6 @@ components:
           $ref: '#/components/schemas/FavoriteType'
         visibility:
           $ref: '#/components/schemas/FavoriteGroupVisibility'
-      required:
-        - id
-        - ownerId
-        - ownerDisplayName
-        - name
-        - displayName
-        - type
-        - visibility
-        - tags
       title: FavoriteGroup
       type: object
     UpdateFavoriteGroupRequest:
@@ -4894,14 +4724,6 @@ components:
         url:
           minLength: 1
           type: string
-      required:
-        - category
-        - fileName
-        - md5
-        - sizeInBytes
-        - status
-        - uploadId
-        - url
     FileVersion:
       description: ''
       properties:
@@ -4925,10 +4747,6 @@ components:
           description: Incremental version counter, can only be increased.
           minimum: 0
           type: integer
-      required:
-        - version
-        - status
-        - created_at
       title: FileVersion
       type: object
     File:
@@ -4961,14 +4779,6 @@ components:
           minItems: 1
           type: array
           uniqueItems: true
-      required:
-        - id
-        - name
-        - ownerId
-        - mimeType
-        - extension
-        - tags
-        - versions
       title: File
       type: object
     CreateFileRequest:
@@ -5049,8 +4859,6 @@ components:
           type: string
           minLength: 1
           description: ''
-      required:
-        - url
     FileVersionUploadStatus:
       title: FileVersionUploadStatus
       type: object
@@ -5083,13 +4891,6 @@ components:
           minItems: 0
           items:
             type: object
-      required:
-        - uploadId
-        - fileName
-        - nextPartNumber
-        - maxParts
-        - parts
-        - etags
     LimitedUser:
       description: ''
       properties:
@@ -5134,16 +4935,35 @@ components:
           type: string
         friendKey:
           type: string
-      required:
-        - id
-        - displayName
-        - statusDescription
-        - developerType
-        - last_platform
-        - status
-        - isFriend
-        - tags
       title: LimitedUser
+      type: object
+    NotificationID:
+      example: not_00000000-0000-0000-0000-000000000000
+      title: NotificationID
+      type: string
+    NotificationDetails:
+      properties:
+        inviteMessage:
+          type: string
+        worldId:
+          $ref: '#/components/schemas/WorldID'
+        worldName:
+          type: string
+        initiatorUserId:
+          $ref: '#/components/schemas/UserID'
+        userToKickId:
+          $ref: '#/components/schemas/UserID'
+        inResponseTo:
+          $ref: '#/components/schemas/NotificationID'
+        requestMessage:
+          description: Used when using InviteMessage Slot.
+          type: string
+        platform:
+          description: 'TODO: Does this still exist?'
+          type: string
+        responseMessage:
+          type: string
+      title: NotificationDetails
       type: object
     NotificationType:
       type: string
@@ -5164,10 +4984,7 @@ components:
           format: date-time
           type: string
         details:
-          default: '{}'
-          description: '**NOTICE:** This is not a JSON object when received from the REST API, but it is when received from the Websocket API. When received from the REST API, this is a json **encoded** object, meaning you have to json-de-encode to get the NotificationDetail object depending on the NotificationType.'
-          example: 'OneOf: {}, NotificationDetailInvite, NotificationDetailInviteResponse, NotificationDetailRequestInvite, NotificationDetailRequestInviteResponse, NotificationDetailVoteToKick'
-          type: string
+          $ref: '#/components/schemas/NotificationDetails'
         id:
           minLength: 1
           type: string
@@ -5191,13 +5008,6 @@ components:
           description: '-| **DEPRECATED:** VRChat API no longer return usernames of other users. [See issue by Tupper for more information](https://github.com/pypy-vrc/VRCX/issues/429).'
         type:
           $ref: '#/components/schemas/NotificationType'
-      required:
-        - id
-        - senderUserId
-        - type
-        - message
-        - details
-        - created_at
       title: Notification
       type: object
     FriendStatus:
@@ -5211,10 +5021,6 @@ components:
         outgoingRequest:
           default: false
           type: boolean
-      required:
-        - isFriend
-        - outgoingRequest
-        - incomingRequest
       title: FriendStatus
       type: object
     GroupShortCode:
@@ -6076,28 +5882,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/UdonProductId'
-      required:
-        - authorId
-        - authorName
-        - capacity
-        - recommendedCapacity
-        - created_at
-        - description
-        - featured
-        - heat
-        - id
-        - imageUrl
-        - labsPublicationDate
-        - name
-        - organization
-        - popularity
-        - publicationDate
-        - releaseStatus
-        - tags
-        - thumbnailImageUrl
-        - updated_at
-        - version
-        - visits
     GroupInstance:
       title: GroupInstance
       type: object
@@ -6114,11 +5898,6 @@ components:
           type: integer
           minimum: 0
           example: 6
-      required:
-        - instanceId
-        - location
-        - world
-        - memberCount
     CreateGroupInviteRequest:
       title: CreateGroupInviteRequest
       type: object
@@ -6242,10 +6021,6 @@ components:
           default: false
           example: true
           description: Whether the user is allowed to add this permission to a role.
-    NotificationID:
-      example: not_00000000-0000-0000-0000-000000000000
-      title: NotificationID
-      type: string
     GroupPostVisibility:
       example: public
       title: GroupPostVisibility
@@ -6384,10 +6159,7 @@ components:
           format: date-time
           type: string
         details:
-          default: '{}'
-          description: '**NOTICE:** This is not a JSON object, this is a json **encoded** object, meaning you have to json-de-encode to get the NotificationDetail object depending on the NotificationType.'
-          example: 'OneOf: {}, NotificationDetailInvite, NotificationDetailInviteResponse, NotificationDetailRequestInvite, NotificationDetailRequestInviteResponse, NotificationDetailVoteToKick'
-          type: string
+          $ref: '#/components/schemas/NotificationDetails'
         id:
           minLength: 1
           type: string
@@ -6406,14 +6178,6 @@ components:
           description: '-| **DEPRECATED:** VRChat API no longer return usernames of other users. [See issue by Tupper for more information](https://github.com/pypy-vrc/VRCX/issues/429).'
         type:
           $ref: '#/components/schemas/NotificationType'
-      required:
-        - created_at
-        - details
-        - id
-        - message
-        - recieverUserId
-        - senderUserId
-        - type
       title: SentNotification
       type: object
     RequestInviteRequest:
@@ -6475,14 +6239,6 @@ components:
         updatedAt:
           format: date-time
           type: string
-      required:
-        - id
-        - slot
-        - message
-        - messageType
-        - updatedAt
-        - remainingCooldownMinutes
-        - canBeUpdated
       title: InviteMessage
       type: object
     UpdateInviteMessageRequest:
@@ -6567,9 +6323,6 @@ components:
       title: InstancePlatforms
       type: object
       additionalProperties: false
-      required:
-        - android
-        - standalonewindows
       properties:
         android:
           type: integer
@@ -6700,31 +6453,6 @@ components:
         hardClose:
           type: boolean
           nullable: true
-      required:
-        - active
-        - canRequestInvite
-        - capacity
-        - clientNumber
-        - full
-        - id
-        - instanceId
-        - location
-        - n_users
-        - name
-        - permanent
-        - photonRegion
-        - platforms
-        - region
-        - secureName
-        - tags
-        - type
-        - worldId
-        - queueEnabled
-        - queueSize
-        - recommendedCapacity
-        - strict
-        - userCount
-        - world
     InstanceShortNameResponse:
       properties:
         secureName:
@@ -6735,8 +6463,6 @@ components:
           type: string
           minLength: 1
           example: 02u7yz8j
-      required:
-        - secureName
       title: InstanceShortNameResponse
       type: object
     PermissionID:
@@ -6765,10 +6491,6 @@ components:
           $ref: '#/components/schemas/UserID'
         data:
           type: object
-      required:
-        - id
-        - ownerId
-        - name
       title: Permission
       type: object
     PlayerModerationID:
@@ -6806,14 +6528,6 @@ components:
           $ref: '#/components/schemas/UserID'
         type:
           $ref: '#/components/schemas/PlayerModerationType'
-      required:
-        - id
-        - type
-        - sourceUserId
-        - sourceDisplayName
-        - targetUserId
-        - targetDisplayName
-        - created
       title: PlayerModeration
       type: object
     ModerateUserRequest:
@@ -6842,9 +6556,6 @@ components:
           description: Announcement text
           minLength: 1
           type: string
-      required:
-        - name
-        - text
     DeploymentGroup:
       type: string
       description: |-
@@ -6925,12 +6636,6 @@ components:
           type: string
           example: avatar
           description: Type is not present if it is a world.
-      required:
-        - name
-        - platform
-        - sortHeading
-        - sortOrder
-        - sortOwnership
     APIConfigEvents:
       title: APIConfigEvents
       type: object
@@ -7535,86 +7240,6 @@ components:
           description: Currently used youtube-dl.exe version
           minLength: 1
           type: string
-      required:
-        - VoiceEnableDegradation
-        - VoiceEnableReceiverLimiting
-        - address
-        - announcements
-        - appName
-        - buildVersionTag
-        - clientApiKey
-        - clientBPSCeiling
-        - clientDisconnectTimeout
-        - clientReservedPlayerBPS
-        - clientSentCountAllowance
-        - contactEmail
-        - copyrightEmail
-        - currentTOSVersion
-        - defaultAvatar
-        - deploymentGroup
-        - devAppVersionStandalone
-        - devDownloadLinkWindows
-        - devSdkUrl
-        - devSdkVersion
-        - devServerVersionStandalone
-        - dis-countdown
-        - disableAvatarCopying
-        - disableAvatarGating
-        - disableCommunityLabs
-        - disableCommunityLabsPromotion
-        - disableEmail
-        - disableEventStream
-        - disableFeedbackGating
-        - disableFrontendBuilds
-        - disableHello
-        - disableOculusSubs
-        - disableRegistration
-        - disableSteamNetworking
-        - disableTwoFactorAuth
-        - disableUdon
-        - disableUpgradeAccount
-        - downloadLinkWindows
-        - downloadUrls
-        - dynamicWorldRows
-        - events
-        - gearDemoRoomId
-        - homeWorldId
-        - homepageRedirectTarget
-        - hubWorldId
-        - jobsEmail
-        - messageOfTheDay
-        - moderationEmail
-        - moderationQueryPeriod
-        - notAllowedToSelectAvatarInPrivateWorldMessage
-        - plugin
-        - releaseAppVersionStandalone
-        - releaseSdkUrl
-        - releaseSdkVersion
-        - releaseServerVersionStandalone
-        - sdkDeveloperFaqUrl
-        - sdkDiscordUrl
-        - sdkNotAllowedToPublishMessage
-        - sdkUnityVersion
-        - serverName
-        - supportEmail
-        - timeOutWorldId
-        - tutorialWorldId
-        - updateRateMsMaximum
-        - updateRateMsMinimum
-        - updateRateMsNormal
-        - updateRateMsUdonManual
-        - uploadAnalysisPercent
-        - urlList
-        - useReliableUdpForVoice
-        - userUpdatePeriod
-        - userVerificationDelay
-        - userVerificationRetry
-        - userVerificationTimeout
-        - viveWindowsUrl
-        - whiteListedAssetUrls
-        - worldUpdatePeriod
-        - player-url-resolver-hash
-        - player-url-resolver-version
     InfoPushDataClickable:
       type: object
       title: InfoPushDataClickable
@@ -7633,8 +7258,6 @@ components:
           type: array
           items:
             type: string
-      required:
-        - command
     InfoPushDataArticleContent:
       title: InfoPushDataArticleContent
       type: object
@@ -7715,16 +7338,6 @@ components:
         endDate:
           type: string
           format: date-time
-      required:
-        - id
-        - isEnabled
-        - releaseStatus
-        - priority
-        - tags
-        - data
-        - hash
-        - createdAt
-        - updatedAt
     APIHealth:
       title: APIHealth
       type: object
@@ -7737,10 +7350,6 @@ components:
         buildVersionTag:
           type: string
           minLength: 1
-      required:
-        - ok
-        - serverName
-        - buildVersionTag
     User:
       title: User
       type: object
@@ -7831,30 +7440,6 @@ components:
           deprecated: true
         worldId:
           $ref: '#/components/schemas/WorldID'
-      required:
-        - allowAvatarCopying
-        - badges
-        - bio
-        - bioLinks
-        - currentAvatarImageUrl
-        - currentAvatarThumbnailImageUrl
-        - currentAvatarTags
-        - date_joined
-        - developerType
-        - displayName
-        - friendKey
-        - id
-        - isFriend
-        - last_activity
-        - last_login
-        - last_platform
-        - profilePicOverride
-        - pronouns
-        - state
-        - status
-        - statusDescription
-        - tags
-        - userIcon
     UpdateUserRequest:
       title: UpdateUserRequest
       type: object
@@ -7932,9 +7517,6 @@ components:
           example: 2022.3.6f1
           minLength: 1
           type: string
-      required:
-        - platform
-        - unityVersion
       title: LimitedUnityPackage
       type: object
     LimitedWorld:
@@ -8025,26 +7607,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/UdonProductId'
-      required:
-        - id
-        - name
-        - authorId
-        - authorName
-        - capacity
-        - imageUrl
-        - thumbnailImageUrl
-        - releaseStatus
-        - organization
-        - tags
-        - favorites
-        - created_at
-        - updated_at
-        - publicationDate
-        - labsPublicationDate
-        - unityPackages
-        - popularity
-        - heat
-        - occupants
       title: LimitedWorld
       type: object
     CreateWorldRequest:
@@ -8152,9 +7714,6 @@ components:
           $ref: '#/components/schemas/WorldID'
         metadata:
           type: object
-      required:
-        - id
-        - metadata
     WorldPublishStatus:
       title: WorldPublishStatus
       type: object
@@ -8163,8 +7722,6 @@ components:
         canPublish:
           type: boolean
           default: true
-      required:
-        - canPublish
     NotificationDetailInvite:
       properties:
         inviteMessage:
@@ -8173,9 +7730,6 @@ components:
           $ref: '#/components/schemas/WorldID'
         worldName:
           type: string
-      required:
-        - worldId
-        - worldName
       title: NotificationDetailInvite
       type: object
     NotificationDetailInviteResponse:
@@ -8184,9 +7738,6 @@ components:
           $ref: '#/components/schemas/NotificationID'
         responseMessage:
           type: string
-      required:
-        - inResponseTo
-        - responseMessage
       title: NotificationDetailInviteResponse
       type: object
     NotificationDetailRequestInvite:
@@ -8206,8 +7757,6 @@ components:
         requestMessage:
           description: Used when using InviteMessage Slot.
           type: string
-      required:
-        - inResponseTo
       title: NotificationDetailRequestInviteResponse
       type: object
     NotificationDetailVoteToKick:
@@ -8216,9 +7765,6 @@ components:
           $ref: '#/components/schemas/UserID'
         userToKickId:
           $ref: '#/components/schemas/UserID'
-      required:
-        - userToKickId
-        - initiatorUserId
       title: NotificationDetailVoteToKick
       type: object
   securitySchemes:
@@ -8739,7 +8285,6 @@ components:
                 senderUserId: usr_c1644b5b-3ca4-45b4-97c6-a2a0de70d469
                 type: friendRequest
                 message: ''
-                details: '{}'
                 seen: false
                 created_at: '2021-01-01T00:00:00.000Z'
     FriendBadRequestError:
@@ -9148,7 +8693,6 @@ components:
                 senderUserId: usr_c1644b5b-3ca4-45b4-97c6-a2a0de70d469
                 type: friendRequest
                 message: ''
-                details: '{}'
                 created_at: '2021-01-01T00:00:00.000Z'
     InviteMustBeFriendsError:
       description: Error response when trying to invite someome whom you are not friends with.
