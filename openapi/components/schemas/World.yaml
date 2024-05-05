@@ -120,25 +120,3 @@ properties:
     type: array
     items:
       $ref: ./UdonProductId.yaml
-required:
-  - authorId
-  - authorName
-  - capacity
-  - recommendedCapacity
-  - created_at
-  - description
-  - featured
-  - heat
-  - id
-  - imageUrl
-  - labsPublicationDate
-  - name
-  - organization
-  - popularity
-  - publicationDate
-  - releaseStatus
-  - tags
-  - thumbnailImageUrl
-  - updated_at
-  - version
-  - visits
