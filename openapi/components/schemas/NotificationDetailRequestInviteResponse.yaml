@@ -4,7 +4,5 @@ properties:
   requestMessage:
     description: Used when using InviteMessage Slot.
     type: string
-required:
-  - inResponseTo
 title: NotificationDetailRequestInviteResponse
 type: object
