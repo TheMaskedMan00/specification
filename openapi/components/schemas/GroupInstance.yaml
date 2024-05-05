@@ -13,8 +13,3 @@ properties:
     type: integer
     minimum: 0
     example: 6
-required:
-  - instanceId
-  - location
-  - world
-  - memberCount
