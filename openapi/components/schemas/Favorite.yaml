@@ -12,10 +12,5 @@ properties:
     type: array
   type:
     $ref: ./FavoriteType.yaml
-required:
-  - id
-  - type
-  - favoriteId
-  - tags
 title: Favorite
 type: object

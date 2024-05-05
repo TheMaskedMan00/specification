@@ -9,7 +9,3 @@ properties:
   buildVersionTag:
     type: string
     minLength: 1
-required:
-  - ok
-  - serverName
-  - buildVersionTag

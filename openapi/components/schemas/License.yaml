@@ -12,8 +12,3 @@ properties:
     minLength: 1
   forAction:
     $ref: ./LicenseAction.yaml
-required:
-  - forId
-  - forType
-  - forName
-  - forAction

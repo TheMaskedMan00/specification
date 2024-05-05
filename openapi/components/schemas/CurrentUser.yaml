@@ -177,50 +177,5 @@ properties:
     deprecated: true
     description: -|
       **DEPRECATED:** VRChat API no longer return usernames of other users. [See issue by Tupper for more information](https://github.com/pypy-vrc/VRCX/issues/429).
-required:
-  - id
-  - displayName
-  - userIcon
-  - badges
-  - bio
-  - bioLinks
-  - profilePicOverride
-  - pronouns
-  - statusDescription
-  - pastDisplayNames
-  - hasEmail
-  - hasPendingEmail
-  - obfuscatedEmail
-  - obfuscatedPendingEmail
-  - emailVerified
-  - hasBirthday
-  - unsubscribe
-  - statusHistory
-  - statusFirstTime
-  - friends
-  - friendGroupNames
-  - currentAvatarImageUrl
-  - currentAvatarThumbnailImageUrl
-  - currentAvatarTags
-  - currentAvatar
-  - currentAvatarAssetUrl
-  - acceptedTOSVersion
-  - steamId
-  - steamDetails
-  - oculusId
-  - hasLoggedInFromClient
-  - homeLocation
-  - twoFactorAuthEnabled
-  - state
-  - tags
-  - developerType
-  - last_login
-  - last_mobile
-  - last_platform
-  - allowAvatarCopying
-  - status
-  - date_joined
-  - isFriend
-  - friendKey
 title: CurrentUser
 type: object

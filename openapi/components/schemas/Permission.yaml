@@ -19,9 +19,5 @@ properties:
     $ref: ./UserID.yaml
   data:
     type: object
-required:
-  - id
-  - ownerId
-  - name
 title: Permission
 type: object

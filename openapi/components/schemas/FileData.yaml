@@ -28,11 +28,3 @@ properties:
   url:
     minLength: 1
     type: string
-required:
-  - category
-  - fileName
-  - md5
-  - sizeInBytes
-  - status
-  - uploadId
-  - url

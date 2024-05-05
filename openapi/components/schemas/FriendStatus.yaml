@@ -8,9 +8,5 @@ properties:
   outgoingRequest:
     default: false
     type: boolean
-required:
-  - isFriend
-  - outgoingRequest
-  - incomingRequest
 title: FriendStatus
 type: object

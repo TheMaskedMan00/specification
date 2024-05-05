@@ -28,9 +28,3 @@ properties:
     type: string
     example: avatar
     description: Type is not present if it is a world.
-required:
-  - name
-  - platform
-  - sortHeading
-  - sortOrder
-  - sortOwnership

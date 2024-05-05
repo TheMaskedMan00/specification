@@ -5,8 +5,5 @@ properties:
     $ref: ./WorldID.yaml
   worldName:
     type: string
-required:
-  - worldId
-  - worldName
 title: NotificationDetailInvite
 type: object

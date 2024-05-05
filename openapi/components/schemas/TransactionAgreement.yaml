@@ -64,22 +64,4 @@ properties:
     type: number
   failedAttempts:
     type: number
-required:
-  - agreementId
-  - itemId
-  - status
-  - period
-  - frequency
-  - billingType
-  - startDate
-  - endDate
-  - recurringAmt
-  - currency
-  - timeCreated
-  - nextPayment
-  - lastPayment
-  - lastAmount
-  - lastAmountVat
-  - outstanding
-  - failedAttempts
 title: TransactionAgreement

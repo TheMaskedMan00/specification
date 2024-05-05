@@ -6,6 +6,3 @@ properties:
     $ref: ./WorldID.yaml
   metadata:
     type: object
-required:
-  - id
-  - metadata

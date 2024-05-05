@@ -22,14 +22,5 @@ properties:
     $ref: ./FavoriteType.yaml
   visibility:
     $ref: ./FavoriteGroupVisibility.yaml
-required:
-  - id
-  - ownerId
-  - ownerDisplayName
-  - name
-  - displayName
-  - type
-  - visibility
-  - tags
 title: FavoriteGroup
 type: object

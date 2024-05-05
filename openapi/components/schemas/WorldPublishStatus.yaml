@@ -5,5 +5,3 @@ properties:
   canPublish:
     type: boolean
     default: true
-required:
-  - canPublish

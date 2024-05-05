@@ -64,22 +64,5 @@ properties:
     example: 68
     minimum: 0
     type: integer
-required:
-  - authorId
-  - authorName
-  - created_at
-  - description
-  - featured
-  - id
-  - imageUrl
-  - name
-  - releaseStatus
-  - tags
-  - thumbnailImageUrl
-  - unityPackages
-  - unityPackageUrl
-  - unityPackageUrlObject
-  - updated_at
-  - version
 title: Avatar
 type: object

@@ -23,8 +23,3 @@ properties:
     type: string
     example: Trusted
     minLength: 1
-required:
-  - state
-  - country
-  - currency
-  - status

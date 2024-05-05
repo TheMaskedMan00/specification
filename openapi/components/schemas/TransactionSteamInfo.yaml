@@ -18,10 +18,4 @@ properties:
     type: string
     minLength: 1
     description: 'Steam Transaction ID, NOT the same as VRChat TransactionID'
-required:
-  - walletInfo
-  - steamId
-  - orderId
-  - steamUrl
-  - transId
 title: TransactionSteamInfo

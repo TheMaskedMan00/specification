@@ -1,0 +1,23 @@
+properties:
+  inviteMessage:
+    type: string
+  worldId:
+    $ref: ./WorldID.yaml
+  worldName:
+    type: string
+  initiatorUserId:
+    $ref: ./UserID.yaml
+  userToKickId:
+    $ref: ./UserID.yaml
+  inResponseTo:
+    $ref: ./NotificationID.yaml
+  requestMessage:
+    description: Used when using InviteMessage Slot.
+    type: string
+  platform:
+    description: 'TODO: Does this still exist?'
+    type: string
+  responseMessage:
+    type: string
+title: NotificationDetails
+type: object

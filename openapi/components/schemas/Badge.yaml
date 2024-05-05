@@ -26,9 +26,3 @@ properties:
     format: date-time
     description: only present in CurrentUser badges
     nullable: true
-required:
-  - badgeDescription
-  - badgeId
-  - badgeImageUrl
-  - badgeName
-  - showcased

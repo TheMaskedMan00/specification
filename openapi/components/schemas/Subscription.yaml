@@ -34,10 +34,3 @@ properties:
     $ref: ./SubscriptionPeriod.yaml
   tier:
     type: number
-required:
-  - id
-  - steamItemId
-  - amount
-  - description
-  - period
-  - tier

@@ -6,8 +6,5 @@ properties:
     example: 2022.3.6f1
     minLength: 1
     type: string
-required:
-  - platform
-  - unityVersion
 title: LimitedUnityPackage
 type: object
