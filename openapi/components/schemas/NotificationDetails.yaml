@@ -1,1 +1,9 @@
-
+properties:
+  inviteMessage:
+    type: string
+  worldId:
+    $ref: ./WorldID.yaml
+  worldName:
+    type: string
+title: NotificationDetailInvite
+type: object
