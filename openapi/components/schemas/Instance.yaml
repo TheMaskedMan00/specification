@@ -118,28 +118,3 @@ properties:
   hardClose:
     type: boolean
     nullable: true
-required:
-  - active
-  - canRequestInvite
-  - capacity
-  - clientNumber
-  - full
-  - id
-  - instanceId
-  - location
-  - n_users
-  - name
-  - permanent
-  - photonRegion
-  - platforms
-  - region
-  - secureName
-  - tags
-  - type
-  - worldId
-  - queueEnabled
-  - queueSize
-  - recommendedCapacity
-  - strict
-  - userCount
-  - world
