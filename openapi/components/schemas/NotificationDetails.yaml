@@ -17,5 +17,7 @@ properties:
   platform:
     description: 'TODO: Does this still exist?'
     type: string
+  responseMessage:
+    type: string
 title: NotificationDetails
 type: object
