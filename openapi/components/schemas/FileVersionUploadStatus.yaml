@@ -29,10 +29,3 @@ properties:
     minItems: 0
     items:
       type: object
-required:
-  - uploadId
-  - fileName
-  - nextPartNumber
-  - maxParts
-  - parts
-  - etags
