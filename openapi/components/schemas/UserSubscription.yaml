@@ -59,19 +59,4 @@ properties:
   isGift:
     type: boolean
     default: false
-required:
-  - id
-  - transactionId
-  - store
-  - amount
-  - description
-  - period
-  - tier
-  - active
-  - status
-  - expires
-  - created_at
-  - updated_at
-  - licenseGroups
-  - isGift
 title: UserSubscription
