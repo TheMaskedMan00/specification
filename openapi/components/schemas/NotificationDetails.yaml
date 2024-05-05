@@ -14,5 +14,8 @@ properties:
   requestMessage:
     description: Used when using InviteMessage Slot.
     type: string
+  platform:
+    description: 'TODO: Does this still exist?'
+    type: string
 title: NotificationDetails
 type: object
