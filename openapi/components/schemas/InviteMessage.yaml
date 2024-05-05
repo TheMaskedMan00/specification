@@ -22,13 +22,5 @@ properties:
   updatedAt:
     format: date-time
     type: string
-required:
-  - id
-  - slot
-  - message
-  - messageType
-  - updatedAt
-  - remainingCooldownMinutes
-  - canBeUpdated
 title: InviteMessage
 type: object
