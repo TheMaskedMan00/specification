@@ -37,13 +37,3 @@ properties:
   endDate:
     type: string
     format: date-time
-required:
-  - id
-  - isEnabled
-  - releaseStatus
-  - priority
-  - tags
-  - data
-  - hash
-  - createdAt
-  - updatedAt
