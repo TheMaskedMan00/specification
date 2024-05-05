@@ -1,9 +1,6 @@
 title: InstancePlatforms
 type: object
 additionalProperties: false
-required:
-  - android
-  - standalonewindows
 properties:
   android:
     type: integer
