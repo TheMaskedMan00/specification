@@ -33,11 +33,3 @@ properties:
   isTokens:
     type: boolean
     default: false
-required:
-  - id
-  - status
-  - subscription
-  - sandbox
-  - created_at
-  - updated_at
-  - error
