@@ -5,5 +5,9 @@ properties:
     $ref: ./WorldID.yaml
   worldName:
     type: string
+  initiatorUserId:
+    $ref: ./UserID.yaml
+  userToKickId:
+    $ref: ./UserID.yaml
 title: NotificationDetailInvite
 type: object
