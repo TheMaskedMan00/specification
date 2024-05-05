@@ -85,25 +85,5 @@ properties:
     type: array
     items:
       $ref: ./UdonProductId.yaml
-required:
-  - id
-  - name
-  - authorId
-  - authorName
-  - capacity
-  - imageUrl
-  - thumbnailImageUrl
-  - releaseStatus
-  - organization
-  - tags
-  - favorites
-  - created_at
-  - updated_at
-  - publicationDate
-  - labsPublicationDate
-  - unityPackages
-  - popularity
-  - heat
-  - occupants
 title: LimitedWorld
 type: object
