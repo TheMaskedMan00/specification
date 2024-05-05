@@ -5,7 +5,5 @@ properties:
   status_code:
     minimum: 100
     type: integer
-required:
-  - status_code
 title: Response
 type: object
