@@ -9,5 +9,10 @@ properties:
     $ref: ./UserID.yaml
   userToKickId:
     $ref: ./UserID.yaml
-title: NotificationDetailInvite
+  inResponseTo:
+    $ref: ./NotificationID.yaml
+  requestMessage:
+    description: Used when using InviteMessage Slot.
+    type: string
+title: NotificationDetails
 type: object
