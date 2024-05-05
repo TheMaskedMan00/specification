@@ -88,27 +88,3 @@ properties:
     deprecated: true
   worldId:
     $ref: ./WorldID.yaml
-required:
-  - allowAvatarCopying
-  - badges
-  - bio
-  - bioLinks
-  - currentAvatarImageUrl
-  - currentAvatarThumbnailImageUrl
-  - currentAvatarTags
-  - date_joined
-  - developerType
-  - displayName
-  - friendKey
-  - id
-  - isFriend
-  - last_activity
-  - last_login
-  - last_platform
-  - profilePicOverride
-  - pronouns
-  - state
-  - status
-  - statusDescription
-  - tags
-  - userIcon
